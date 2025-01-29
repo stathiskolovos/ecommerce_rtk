@@ -33,10 +33,10 @@ const CartSlice = createSlice({
             }
         },
         
-        increaseItemQuantity(state, action) {
+        decreaseItemQuantity(state, action) {
             const itemToIncrease = state.cartItems.find(item => item.id === action.payload);
             if (itemToIncrease) {
-              itemToIncrease.quantity += 1;
+              itemToIncrease.quantity -= 1;
             }
         }     
     }
